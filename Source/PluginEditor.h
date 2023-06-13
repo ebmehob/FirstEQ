@@ -35,7 +35,11 @@ private:
     // access the processor object that created it.
     FirstEQAudioProcessor& audioProcessor;
     
-    MySliders peakFreqSlider, peakGainSlider, peakQualitySlider, lowCutFreqSlider, highCutFreqSlider, lowCutSlopeSlider, highCutSlopeSlider;
+    MySliders   peakFreqSlider, peakGainSlider, peakQualitySlider, lowCutFreqSlider, highCutFreqSlider, lowCutSlopeSlider, highCutSlopeSlider;
+    
+    using Attachment = juce::AudioProcessorValueTreeState::SliderAttachment;
+    
+    Attachment  peakFreqSliderAttachment, peakGainSliderAttachment, peakQualitySliderAttachment, lowCutFreqSliderAttachment, highCutFreqSliderAttachment, lowCutSlopeSliderAttachment, highCutSlopeSliderAttachment;
     
     
     
